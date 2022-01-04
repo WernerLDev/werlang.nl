@@ -1,4 +1,4 @@
-baseURL = "https://wernerldev.github.io/werlang.nl/"
+baseURL = "https://www.werlang.nl"
 title = "Werner Langenhuisen"
 theme = "etch"
 languageCode = "en-US"
