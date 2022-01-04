@@ -1,4 +1,4 @@
-baseURL = "http://werlang.nl"
+baseURL = "https://werlang.nl"
 title = "Werner Langenhuisen"
 theme = "etch"
 languageCode = "en-US"
