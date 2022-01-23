@@ -1,5 +1,5 @@
-baseURL = "https://werlang.nl"
-title = "Werner's Blog"
+qbaseURL = "https://werlang.nl"
+title = "Werner Tech"
 theme = "etch"
 languageCode = "en-US"
 enableInlineShortcodes = true
