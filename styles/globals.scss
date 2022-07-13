@@ -1,0 +1,35 @@
+@import "fonts.scss";
+@import "colors.scss";
+@import "../node_modules/highlight.js/scss/nord.scss";
+
+// Bootstrap variable overrides
+$primary: $dark-byzantium;
+$font-family-base: 'Noto Serif', Georgia, "Times New Roman";
+$footer-height: 250px;
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  color: $rich-black;
+}
+
+a {
+  color: $orange-soda;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+  min-height: $footer-height;
+}
+
+main {
+  min-height: calc(100vh - $footer-height);
+}

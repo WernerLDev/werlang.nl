@@ -1,0 +1,14 @@
+@import "../../styles/colors.scss";
+
+.footer {
+  background: $rich-black;
+  color: $cultured;
+
+  a {
+    color: $orange-soda;
+    &:hover {
+      color: $cultured;
+    }
+  }
+
+}
