@@ -4,9 +4,9 @@ import { Footer } from "../../components/footer/footer";
 import { Header } from "../../components/header/header";
 import { FormatDate } from "../../lib/format-date";
 import { BlogPost, FetchSinglePost } from "../../lib/posts-api";
-import { Helmet } from "react-helmet";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb";
-import Link from "next/link";
+import Head from "next/head";
+import { BasePage } from "../../components/base-page/base-page";
 
 type StaticPropsParams = {
   params: {
@@ -21,36 +21,31 @@ type PostProps = {
 export const Post = ({ post }: PostProps) => {
   const publishDate = useMemo(() => new Date(post.metaData.date), [post]);
 
-  return (
+  const header = (
     <>
-      <Helmet>
-        <title>{post.metaData.title} - werlang.nl</title>
-      </Helmet>
-      <main>
-        <Header>
-          <div className="container p-5 text-center">
-            <h1>{post.metaData.title}</h1>
-            <span>Published at: {FormatDate(publishDate)}</span>
-          </div>
-        </Header>
-        <div className="container p-5">
-          <Breadcrumb
-            items={[
-              { path: "/", title: "Home" },
-              { path: "/blog", title: "Blog" },
-              { path: "", title: post.metaData.title },
-            ]}
-          />
-          <div
-            className="mt-5"
-            dangerouslySetInnerHTML={{
-              __html: post.content,
-            }}
-          ></div>
-        </div>
-      </main>
-      <Footer />
+      <h1>{post.metaData.title}</h1>
+      <span>Published at: {FormatDate(publishDate)}</span>
     </>
+  );
+
+  return (
+    <BasePage title={`${post.metaData.title} - werlang.nl`} header={header}>
+      <div className="container p-5">
+        <Breadcrumb
+          items={[
+            { path: "/", title: "Home" },
+            { path: "/blog", title: "Blog" },
+            { path: "", title: post.metaData.title },
+          ]}
+        />
+        <div
+          className="mt-5"
+          dangerouslySetInnerHTML={{
+            __html: post.content,
+          }}
+        ></div>
+      </div>
+    </BasePage>
   );
 };
 

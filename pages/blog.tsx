@@ -1,6 +1,7 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
-import { Helmet } from "react-helmet";
+import { BasePage } from "../components/base-page/base-page";
 import { Footer } from "../components/footer/footer";
 import { Header } from "../components/header/header";
 import { FormatDate } from "../lib/format-date";
@@ -10,19 +11,9 @@ export type BlogProps = {
   posts: BlogPostMetaData[];
 };
 
-const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => (
-  <>
-    <Helmet>
-      <title>Blog - werlang.nl</title>
-    </Helmet>
-    <main>
-      <Header>
-        <div className={`container p-5`}>
-          <div className="col-12 py-2 fgcolor-light text-center">
-            <h1>Blog posts</h1>
-          </div>
-        </div>
-      </Header>
+const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
+  return (
+    <BasePage title="Blog - werlang.nl" header={<h1>Blog posts</h1>}>
       <div className="container p-5">
         <table className="table table-striped table-borderless">
           <thead>
@@ -47,10 +38,9 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => (
           </tbody>
         </table>
       </div>
-    </main>
-    <Footer />
-  </>
-);
+    </BasePage>
+  );
+};
 
 export async function getStaticProps() {
   return {
