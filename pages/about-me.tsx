@@ -7,7 +7,7 @@ import { TextblockWithImage } from "../components/textblock-with-image/textblock
 import { Textblock } from "../components/textblock/textblock";
 
 const AboutPage: NextPage = () => (
-  <BasePage title="About me - werlang.nl" header={<h1>About me</h1>}>
+  <BasePage title="About me" header={<h1>About me</h1>}>
     <TextblockWithImage
       head="My background"
       image="/images/hello.svg"
@@ -24,9 +24,9 @@ const AboutPage: NextPage = () => (
       <p>
         What I enjoy the most is the <mark>backend of the frontend</mark>,
         meaning I implement user interactions, user flows and integrations with
-        backend-systems using JavaScript / TypeScript and modern frameworks such
-        as React. but I can also create responsive and accessible interfaces
-        using HTML/SCSS, or implement backend APIs using Rest, OData or GraphQL.
+        backend APIs using JavaScript / TypeScript and modern frameworks such as
+        React. but I can also create responsive and accessible interfaces using
+        HTML/SCSS, or implement backend APIs using Rest, OData or GraphQL.
       </p>
       <p>
         My currently prefered tech-stack is React/TypeScript for the frontend

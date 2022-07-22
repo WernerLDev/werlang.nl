@@ -30,6 +30,6 @@ footer {
   min-height: $footer-height;
 }
 
-main {
+.page-wrapper {
   min-height: calc(100vh - $footer-height);
 }

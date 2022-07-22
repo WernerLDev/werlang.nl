@@ -13,7 +13,7 @@ export type BlogProps = {
 
 const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
   return (
-    <BasePage title="Blog - werlang.nl" header={<h1>Blog posts</h1>}>
+    <BasePage title="Blog" header={<h1>Blog posts</h1>}>
       <div className="container p-5">
         <table className="table table-striped table-borderless">
           <thead>
