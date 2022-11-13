@@ -16,26 +16,24 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
     <nav aria-label="breadcrumb">
       <ol className={classNames("breadcrumb")}>
-        {items.map((item, index) => (
-          <>
-            {isActive(index) ? (
-              <li
-                key={`item${index}`}
-                className={classNames(["breadcrumb-item", "active"])}
-                aria-current={"page"}
-              >
-                {item.title}
-              </li>
-            ) : (
-              <li
-                key={`item${index}`}
-                className={classNames(["breadcrumb-item"])}
-              >
-                <Link href={item.path}>{item.title}</Link>
-              </li>
-            )}
-          </>
-        ))}
+        {items.map((item, index) =>
+          isActive(index) ? (
+            <li
+              key={`item${index}`}
+              className={classNames(["breadcrumb-item", "active"])}
+              aria-current={"page"}
+            >
+              {item.title}
+            </li>
+          ) : (
+            <li
+              key={`item${index}`}
+              className={classNames(["breadcrumb-item"])}
+            >
+              <Link href={item.path}>{item.title}</Link>
+            </li>
+          )
+        )}
       </ol>
     </nav>
   );

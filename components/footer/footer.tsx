@@ -70,11 +70,11 @@ export const Footer = () => (
                 Github
               </a>
             </li>
-            <li className="mb-1">
+            {/* <li className="mb-1">
               <a href="https://mastodon.social/web/@WerTech" rel="me">
                 Mastodon
               </a>
-            </li>
+            </li> */}
             <li className="mb-1">
               <a href="https://www.linkedin.com/in/wernerl/" rel="me">
                 LinkedIn

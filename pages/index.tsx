@@ -19,8 +19,7 @@ const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
     <>
       <h1>Hi, I&apos;m Werner</h1>
       <span>
-        I specialize in building web applications and online experiences using
-        modern web technologies.
+        I specialize in building web applications using modern web technologies.
       </span>
       <div className={`pt-5`}>
         <Image
@@ -39,17 +38,17 @@ const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
       <Textblock head="Who am I?">
         <p>
           You just landed on the personal website of Werner Langenhuisen. A
-          developer from the Netherlands. I graduated in 2013 and have since
-          been building (headless) web applications as a professional software
-          developer. My currently prefered tech-stack is React/TypeScript for
-          frontend and C#/.NET for backend.
+          software developer from the Netherlands. I graduated in 2013 and have
+          since been building (headless) web applications as a professional
+          software developer. My currently prefered tech-stack is
+          React/TypeScript for frontend and C#/.NET for backend.
         </p>
         <Link href="/about-me">
           <a className="btn btn-primary">Read more &#10139;</a>
         </Link>
       </Textblock>
 
-      <TextblockWithImage
+      {/* <TextblockWithImage
         head="Personal projects"
         image="/images/programming.svg"
         imageHeight={400}
@@ -92,7 +91,7 @@ const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
           I needed an easy way to fetch subtitles so I created a simple
           interface around the opensubtitles.org API.
         </p>
-      </TextblockWithImage>
+      </TextblockWithImage> */}
 
       <LatestPosts posts={posts} />
     </BasePage>

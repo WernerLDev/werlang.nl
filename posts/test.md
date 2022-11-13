@@ -1,6 +1,6 @@
 ---
 title: "Next.js page options and how they work"
-metaDesc: "How to use pages in Next.js exploring the options"
+metaDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum tortor ac est placerat porttitor. Vestibulum volutpat est ante, vel faucibus eros placerat non. Integer sed lobortis tellus."
 date: "2021-09-22"
 tags:
   - nextjs

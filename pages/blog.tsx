@@ -1,3 +1,4 @@
+import { format, isSameYear } from "date-fns";
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,32 +12,43 @@ export type BlogProps = {
   posts: BlogPostMetaData[];
 };
 
+type GroupedPosts = {
+  [key: string]: BlogPostMetaData[];
+};
+
 const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
+  const postsGrouped = posts.reduce<GroupedPosts>((acc, current) => {
+    const key = format(new Date(current.date), "MMMM yyyy");
+    (acc[key] = acc[key] || []).push(current);
+    return acc;
+  }, {});
+
   return (
     <BasePage title="Blog" header={<h1>Blog posts</h1>}>
       <div className="container p-5">
-        <table className="table table-striped table-borderless">
-          <thead>
-            <tr>
-              <th scope="col" className="col-3">
-                Publish date
-              </th>
-              <th scope="col">Title</th>
-            </tr>
-          </thead>
-          <tbody>
-            {posts.map((post, index) => (
-              <tr key={`post${index}`}>
-                <td>{FormatDate(new Date(post.date))}</td>
-                <td>
-                  <Link href={`posts/${post.slug}`}>
-                    <a>{post.title}</a>
-                  </Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {Object.entries(postsGrouped).map(([group, posts]) => (
+          <>
+            <h2>{group}</h2>
+            <ul className="list-unstyled">
+              {posts.map((post) => {
+                const dateObj = new Date(post.date);
+                return (
+                  <li className="d-flex blogoverview" key={post.slug}>
+                    <time
+                      className="d-inline-block"
+                      dateTime={dateObj.toISOString()}
+                    >
+                      {FormatDate(dateObj)}
+                    </time>
+                    <Link href={`posts/${post.slug}`}>
+                      <a>{post.title}</a>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        ))}
       </div>
     </BasePage>
   );

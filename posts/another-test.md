@@ -1,6 +1,6 @@
 ---
 title: "A test blog"
-metaDesc: "This is a test blog"
+metaDesc: "Lorem `ipsum` dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum tortor ac est placerat porttitor. Vestibulum volutpat est ante, vel faucibus eros placerat non. Integer sed lobortis tellus. Aenean et turpis sit "
 date: "2021-09-22"
 ---
 

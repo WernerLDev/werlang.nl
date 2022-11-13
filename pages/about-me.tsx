@@ -10,46 +10,49 @@ const AboutPage: NextPage = () => (
   <BasePage title="About me" header={<h1>About me</h1>}>
     <TextblockWithImage
       head="My background"
-      image="/images/hello.svg"
-      imageWidth={450}
-      imageHeight={300}
+      image="/images/aboutmepic.jpg"
+      imageWidth={200}
+      imageHeight={267}
       imageAlt="Drawing of a person waving while sitting behind a desk"
     >
       <p>
         My name is Werner and I am a software developer from the Netherlands. I
-        build stuff for the web as
-        <mark>Fullstack developer</mark> or <mark>Frontend engineer</mark>. I
-        have been doing this as a professional since I graduated in 2013.
+        have a bachelor of engineering with a specialisation in interactive
+        media products.
       </p>
       <p>
-        What I enjoy the most is the <mark>backend of the frontend</mark>,
-        meaning I implement user interactions, user flows and integrations with
-        backend APIs using JavaScript / TypeScript and modern frameworks such as
-        React. but I can also create responsive and accessible interfaces using
-        HTML/SCSS, or implement backend APIs using Rest, OData or GraphQL.
+        As a professional I build stuff for the web. The roles I have had over
+        the years are either
+        <mark>Fullstack developer</mark> or{" "}
+        <mark>Web (frontend) developer</mark>. I have been doing this as a
+        professional since I graduated in 2013.
       </p>
       <p>
-        My currently prefered tech-stack is React/TypeScript for the frontend
-        and C#/.NET for the backend. Most of the projects I worked on run on
-        Linux machines or in docker containers.
+        My currently prefered tech-stack is <mark>React/TypeScript</mark> for
+        the frontend and <mark>C#/.NET</mark> for the backend. In the past I
+        have also worked with other techniques such as JQuery (way back),
+        Angular and Ruby on Rails. I have experience deploying code to Linux
+        VMs, Microsoft Azure App services and Kubernetes clusters.
+      </p>
+      <h3>Good UX matters</h3>
+      <p>
+        Too many shitty websites and applications with really poor user
+        experience on the internet. Sometimes I do not even understand how
+        people come up with some of their shitty design/interaction decisions. I
+        like to build applications that are a joy to use and care a lot about
+        good UX. For this reason I think it is safe to say I have a preference
+        doing frontend engineering with TypeScript.
+      </p>
+      <h4>I hate Web3.0 and big tech</h4>
+      <p>
+        I do not want an internet that is controlled by big tech and web3
+        bullshit like blockchains and NFTs. Instead I want to own and control my
+        own data, and privacy should be default. That means I run Linux on my
+        computer and do not have privacy invading analytics on this website. I
+        am trying really hard to de-google myself. I am kind of succeeding but
+        not there yet.
       </p>
     </TextblockWithImage>
-
-    <Textblock head="I love small things">
-      <p>
-        You may have noticed there is no stupid cookiebar on this website.
-        That&apos;s because I do not make use of privacy invading software like
-        Google Analytics. I do not want an internet that is controlled by big
-        tech and web3 bullshit like blockchains and NFTs. Instead I prefer small
-        tech.
-      </p>
-      <p>
-        Small tech is the opposite of big tech. With small technology privacy is
-        default and people own and control their own data, not big corporations.
-        If you are like me you should sign the{" "}
-        <a href="https://web0.small-web.org/">web0 manifesto</a>.
-      </p>
-    </Textblock>
   </BasePage>
 );
 

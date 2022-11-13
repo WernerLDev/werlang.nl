@@ -3,7 +3,8 @@
 .header {
   background: rgb(240,100,73);
   background: radial-gradient(circle at top right, rgba(240,100,73,1) 0%, rgba(92,55,76,1) 68%); 
-  
+  border-color: $rich-black;
+
   h1 {
     font-size: 3.8rem;
   }

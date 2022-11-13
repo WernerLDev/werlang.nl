@@ -7,6 +7,7 @@ import { BlogPost, FetchSinglePost } from "../../lib/posts-api";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb";
 import Head from "next/head";
 import { BasePage } from "../../components/base-page/base-page";
+import Link from "next/link";
 
 type StaticPropsParams = {
   params: {
@@ -29,21 +30,28 @@ export const Post = ({ post }: PostProps) => {
   );
 
   return (
-    <BasePage title={`${post.metaData.title} - werlang.nl`} header={header}>
+    <BasePage title={`${post.metaData.title} - werlang.nl`}>
       <div className="container p-5">
-        <Breadcrumb
-          items={[
-            { path: "/", title: "Home" },
-            { path: "/blog", title: "Blog" },
-            { path: "", title: post.metaData.title },
-          ]}
-        />
-        <div
-          className="mt-5"
-          dangerouslySetInnerHTML={{
-            __html: post.content,
-          }}
-        ></div>
+        <div className="row">
+          <div className="col-12">
+            <h1>{post.metaData.title}</h1>
+            <time
+              className="fgcolor-lightblue"
+              dateTime={publishDate.toISOString()}
+            >
+              {FormatDate(publishDate)}
+            </time>
+            <div
+              className="mt-4 mb-5"
+              dangerouslySetInnerHTML={{
+                __html: post.content,
+              }}
+            ></div>
+            <Link href={`/blog`}>
+              <a>Back to overview</a>
+            </Link>
+          </div>
+        </div>
       </div>
     </BasePage>
   );
