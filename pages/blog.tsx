@@ -24,7 +24,7 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
   }, {});
 
   return (
-    <BasePage title="Blog" header={<h1>Blog posts</h1>}>
+    <BasePage title="Blog" header={<h1 className="mt-5">Blog posts</h1>}>
       <div className="container p-5">
         {Object.entries(postsGrouped).map(([group, posts]) => (
           <>

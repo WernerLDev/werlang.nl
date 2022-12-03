@@ -6,7 +6,7 @@ export const Footer = () => (
   <footer className={styles.footer}>
     <div className="container p-5">
       <div className="row">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-9">
           <p>
             <small>
               Copyright &copy; {format(new Date(), "yyyy")} - Werner
@@ -42,26 +42,7 @@ export const Footer = () => (
             </small>
           </p>
         </div>
-        <div className="col-12 col-md-3">
-          {/* <h5>Pages</h5>
-          <ul className="list-unstyled">
-            <li className="mb-1">
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link href="/">
-                <a>About me</a>
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link href="/">
-                <a>Blog</a>
-              </Link>
-            </li>
-          </ul> */}
-        </div>
+
         <div className="col-12 col-md-3 text-end">
           <h5>Links</h5>
           <ul className="list-unstyled">

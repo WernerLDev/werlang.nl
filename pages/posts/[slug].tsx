@@ -24,25 +24,32 @@ export const Post = ({ post }: PostProps) => {
 
   const header = (
     <>
-      <h1>{post.metaData.title}</h1>
-      <span>Published at: {FormatDate(publishDate)}</span>
+      <h1 className="mt-5">{post.metaData.title}</h1>
+      <span>
+        Published at:{" "}
+        <time dateTime={publishDate.toISOString()}>
+          {FormatDate(publishDate)}
+        </time>
+      </span>
     </>
   );
 
   return (
-    <BasePage title={`${post.metaData.title} - werlang.nl`}>
-      <div className="container p-5">
+    <BasePage header={header} title={`${post.metaData.title} - werlang.nl`}>
+      <div className="container p-4">
         <div className="row">
-          <div className="col-12">
-            <h1>{post.metaData.title}</h1>
+          <div className="d-none d-lg-block col-lg-1"></div>
+          <div className="col-12 col-lg-10">
+            {/* <h1>{post.metaData.title}</h1>
             <time
               className="fgcolor-lightblue"
               dateTime={publishDate.toISOString()}
             >
               {FormatDate(publishDate)}
-            </time>
+            </time> */}
+
             <div
-              className="mt-4 mb-5"
+              className="mt-1 mb-5 mt-lg-4"
               dangerouslySetInnerHTML={{
                 __html: post.content,
               }}
@@ -51,6 +58,7 @@ export const Post = ({ post }: PostProps) => {
               <a>Back to overview</a>
             </Link>
           </div>
+          <div className="d-none d-lg-block col-lg-1"></div>
         </div>
       </div>
     </BasePage>

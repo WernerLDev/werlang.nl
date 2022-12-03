@@ -1,12 +1,13 @@
 @import "fonts.scss";
 @import "colors.scss";
-@import "../node_modules/highlight.js/scss/nord.scss";
+@import "../node_modules/highlight.js/scss/mono-blue.scss";
 
 // Bootstrap variable overrides
 $primary: $dark-byzantium;
 $dark: $rich-black;
 $font-family-base: 'Noto Serif', Georgia, "Times New Roman";
 $footer-height: 250px;
+$font-size-base: 1.1rem;
 
 // Import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -41,4 +42,35 @@ footer {
 
 .blogoverview > time {
   min-width: 110px;
+}
+
+.breadcrumb a {
+  color: #FFF;
+}
+
+.breadcrumb a:hover {
+  color: #FFF;
+}
+
+.breadcrumb > li.active {
+  color: #FFF;
+}
+
+.navbar-collapse {
+  background: rgba(0,0,0,0.2);
+
+  ul {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(md) { 
+  .navbar-collapse {
+    background: none;
+  
+    ul {
+      width: auto;
+    }
+  }
+  
 }
