@@ -29,6 +29,10 @@ a {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 footer {
   min-height: $footer-height;
 }

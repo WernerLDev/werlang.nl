@@ -37,9 +37,9 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                 {posts.map((post) => {
                   const dateObj = new Date(post.date);
                   return (
-                    <li className="d-flex py-2" key={post.slug}>
+                    <li className="d-lg-flex py-2" key={post.slug}>
                       <time
-                        className="d-inline-block"
+                        className="d-block d-lg-inline-block"
                         dateTime={dateObj.toISOString()}
                       >
                         {FormatDate(dateObj)}

@@ -43,7 +43,7 @@ export const Footer = () => (
           </p>
         </div>
 
-        <div className="col-12 col-md-3 text-end">
+        <div className="col-12 col-md-3 text-lg-end">
           <h5>Links</h5>
           <ul className="list-unstyled">
             <li className="mb-1">

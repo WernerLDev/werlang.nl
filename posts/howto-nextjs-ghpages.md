@@ -32,7 +32,7 @@ Before we can deploy anything you will need to create a new repository first. Th
 
 After you have done that go to the `settings -> pages` of your repository.
 
-![Screenshot if github settings page](/images/screenshot-ghpages.png)
+![Screenshot of Github settings page](/images/screenshot-ghpages.png)
 
 On this page you can enable github pages by selecting a source branch and click `save`. As source branch select the branch `gh-pages`.
 
