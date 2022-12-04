@@ -18,7 +18,7 @@ type GroupedPosts = {
 
 const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
   const postsGrouped = posts.reduce<GroupedPosts>((acc, current) => {
-    const key = format(new Date(current.date), "MMMM yyyy");
+    const key = format(new Date(current.date), "yyyy");
     (acc[key] = acc[key] || []).push(current);
     return acc;
   }, {});
@@ -28,12 +28,12 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
       <div className="container p-5">
         {Object.entries(postsGrouped).map(([group, posts]) => (
           <>
-            <h2>{group}</h2>
-            <ul className="list-unstyled">
+            <h2 className="">{group}</h2>
+            <ul className="list-unstyled mb-5 blogoverview">
               {posts.map((post) => {
                 const dateObj = new Date(post.date);
                 return (
-                  <li className="d-flex blogoverview" key={post.slug}>
+                  <li className="d-flex py-2" key={post.slug}>
                     <time
                       className="d-inline-block"
                       dateTime={dateObj.toISOString()}

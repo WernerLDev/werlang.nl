@@ -7,7 +7,7 @@ import { TextblockWithImage } from "../components/textblock-with-image/textblock
 import { Textblock } from "../components/textblock/textblock";
 
 const AboutPage: NextPage = () => (
-  <BasePage title="About me" header={<h1 className="mt-5">About me</h1>}>
+  <BasePage title="About me" header={<h1 className="mt-5">Who am I?</h1>}>
     <TextblockWithImage
       head="My background"
       image="/images/werner.jpg"
@@ -47,7 +47,7 @@ const AboutPage: NextPage = () => (
         interface that responds quickly to user interactions.
       </p>
 
-      <h4>I do not believe in web3.0 bullshit</h4>
+      <h3>I do not believe in web3.0 bullshit</h3>
       <p>
         I do not want an internet that is controlled by big tech and web3
         bullshit like blockchains and NFTs. Instead I want to own and control my

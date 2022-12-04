@@ -26,7 +26,7 @@ export const Post = ({ post }: PostProps) => {
     <>
       <h1 className="mt-5">{post.metaData.title}</h1>
       <span>
-        Published at:{" "}
+        Published at{" "}
         <time dateTime={publishDate.toISOString()}>
           {FormatDate(publishDate)}
         </time>
@@ -39,17 +39,8 @@ export const Post = ({ post }: PostProps) => {
       <div className="container p-4">
         <div className="row">
           <div className="d-none d-lg-block col-lg-1"></div>
-          <div className="col-12 col-lg-10">
-            {/* <h1>{post.metaData.title}</h1>
-            <time
-              className="fgcolor-lightblue"
-              dateTime={publishDate.toISOString()}
-            >
-              {FormatDate(publishDate)}
-            </time> */}
-
+          <div className="col-12 col-lg-10 mt-1 mb-5 mt-lg-4">
             <div
-              className="mt-1 mb-5 mt-lg-4"
               dangerouslySetInnerHTML={{
                 __html: post.content,
               }}

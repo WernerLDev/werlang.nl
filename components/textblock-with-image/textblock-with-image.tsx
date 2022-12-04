@@ -11,7 +11,7 @@ export type TextblockWithImageProps = {
 
 export const TextblockWithImage = (props: TextblockWithImageProps) => (
   <div className="container-fluid bgcolor-white">
-    <div className="container p-5">
+    <div className="container p-3 p-lg-5">
       <div className="row">
         <div className="col-12 col-lg-8">
           <h1>{props.head}</h1>

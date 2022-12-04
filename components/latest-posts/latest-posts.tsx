@@ -8,7 +8,7 @@ export type LatestPostProps = {
 
 export const LatestPosts = ({ posts }: LatestPostProps) => (
   <div className="container-fluid bgcolor-light">
-    <div className="container p-5">
+    <div className="container p-3 p-lg-5 pt-lg-0">
       <div className="mb-4">
         <h1 className="">Latest posts</h1>
       </div>
