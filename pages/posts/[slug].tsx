@@ -35,7 +35,7 @@ export const Post = ({ post }: PostProps) => {
   );
 
   return (
-    <BasePage header={header} title={`${post.metaData.title} - werlang.nl`}>
+    <BasePage header={header} title={`${post.metaData.title}`}>
       <div className="container p-4">
         <div className="row">
           <div className="d-none d-lg-block col-lg-1"></div>

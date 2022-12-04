@@ -34,7 +34,7 @@ const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
   );
 
   return (
-    <BasePage title="werlang.nl" header={header}>
+    <BasePage header={header}>
       <Textblock head="Who am I?">
         <p>
           You just landed on the personal website of Werner Langenhuisen. A
