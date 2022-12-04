@@ -48,51 +48,6 @@ const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
         </Link>
       </Textblock>
 
-      {/* <TextblockWithImage
-        head="Personal projects"
-        image="/images/programming.svg"
-        imageHeight={400}
-        imageWidth={400}
-        imageAlt="Drawing of a person sitting behind a computer programming"
-      >
-        <p>
-          On my{" "}
-          <a
-            href="https://github.com/WernerLDev"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Github-account
-          </a>{" "}
-          you can find some of my personal projects. Some of the stuff I have
-          worked on:
-        </p>
-        <a
-          href="https://github.com/WernerLDev/ts-websocket-server-protocol"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <strong>Websockets</strong>
-        </a>
-        <p>
-          I implemented the websocket protocol in TypeScript to learn more about
-          how the protocol works. It contains the initial handshake and
-          encoding/decoding of messages.
-        </p>
-
-        <a
-          href="https://github.com/WernerLDev/ScalaSubFetcher"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <strong>Subtitle fetcher</strong>
-        </a>
-        <p>
-          I needed an easy way to fetch subtitles so I created a simple
-          interface around the opensubtitles.org API.
-        </p>
-      </TextblockWithImage> */}
-
       <LatestPosts posts={posts} />
     </BasePage>
   );

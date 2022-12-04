@@ -23,32 +23,36 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
     return acc;
   }, {});
 
+  console.log(posts, postsGrouped);
+
   return (
     <BasePage title="Blog" header={<h1 className="mt-5">Blog posts</h1>}>
       <div className="container p-5">
-        {Object.entries(postsGrouped).map(([group, posts]) => (
-          <>
-            <h2 className="">{group}</h2>
-            <ul className="list-unstyled mb-5 blogoverview">
-              {posts.map((post) => {
-                const dateObj = new Date(post.date);
-                return (
-                  <li className="d-flex py-2" key={post.slug}>
-                    <time
-                      className="d-inline-block"
-                      dateTime={dateObj.toISOString()}
-                    >
-                      {FormatDate(dateObj)}
-                    </time>
-                    <Link href={`posts/${post.slug}`}>
-                      <a>{post.title}</a>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </>
-        ))}
+        {Object.entries(postsGrouped)
+          .reverse()
+          .map(([group, posts]) => (
+            <>
+              <h2 className="">{group}</h2>
+              <ul className="list-unstyled mb-5 blogoverview">
+                {posts.map((post) => {
+                  const dateObj = new Date(post.date);
+                  return (
+                    <li className="d-flex py-2" key={post.slug}>
+                      <time
+                        className="d-inline-block"
+                        dateTime={dateObj.toISOString()}
+                      >
+                        {FormatDate(dateObj)}
+                      </time>
+                      <Link href={`posts/${post.slug}`}>
+                        <a>{post.title}</a>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
+          ))}
       </div>
     </BasePage>
   );

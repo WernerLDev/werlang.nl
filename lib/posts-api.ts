@@ -9,6 +9,7 @@ export type BlogPostMetaData = {
   date: string;
   dateTimestamp: number;
   tags: string;
+  draft: boolean;
 };
 
 export type BlogPost = {
@@ -33,11 +34,13 @@ export const FetchPostsMetaData = (): BlogPostMetaData[] => {
         dateTimestamp: new Date(metaData.date).getTime(),
       };
     })
+    .filter((x) => x.draft == null || x.draft == false)
     .sort((a, b) => b.dateTimestamp - a.dateTimestamp);
 };
 
 export const FetchSinglePost = (slug: string): BlogPost => {
   const readFile = fs.readFileSync(`${POSTS_BASEDIR}/${slug}.md`, "utf-8");
+
   const { data: frontmatter, content } = matter(readFile);
   const metaData = frontmatter as BlogPostMetaData;
 

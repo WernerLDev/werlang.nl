@@ -2,6 +2,7 @@
 title: "A test blog"
 metaDesc: "Lorem `ipsum` dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum tortor ac est placerat porttitor. Vestibulum volutpat est ante, vel faucibus eros placerat non. Integer sed lobortis tellus. Aenean et turpis sit "
 date: "2021-09-22"
+draft: true
 ---
 
 Lorem `ipsum` dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum tortor ac est placerat porttitor. Vestibulum volutpat est ante, vel faucibus eros placerat non. Integer sed lobortis tellus. Aenean et turpis sit amet tortor scelerisque consequat. Cras a rhoncus velit, eget tristique quam. Nulla nec dignissim massa. Mauris pretium hendrerit maximus. Donec feugiat nibh nec ex aliquet, eu pharetra ante feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam egestas pharetra lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas pretium pulvinar magna vitae pulvinar. Sed eget velit quam. In elit lectus, fermentum et lobortis eu, sollicitudin sed lectus.
