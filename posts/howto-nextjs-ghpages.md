@@ -1,6 +1,6 @@
 ---
 title: "Deploy static Next.js site to Github pages"
-metaDesc: "I have built my website using Next.JS and host it on Github pages. In this blog I will show I have have configured my github repository."
+metaDesc: "I have built my website using Next.JS and host it on Github pages. In this blogpost I will show how I have configured my github repository."
 date: "2022-12-04"
 draft: false
 ---
