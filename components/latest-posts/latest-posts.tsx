@@ -20,7 +20,7 @@ export const LatestPosts = ({ posts }: LatestPostProps) => (
           >
             <Link href={`posts/${post.slug}`}>
               <a className="fgcolor-orange text-decoration-none">
-                <h3 className="d-block">{post.title}</h3>
+                <h5 className="d-block">{post.title}</h5>
               </a>
             </Link>
             <p>{post.metaDesc}</p>
