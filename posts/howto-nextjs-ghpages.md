@@ -36,13 +36,15 @@ After you have done that go to the `settings -> pages` of your repository.
 
 On this page you can enable github pages by selecting a source branch and click `save`. As source branch select the branch `gh-pages`.
 
-If the repository is still empty first create an empty Next.JS app using `npx create-next-app@latest` and push to the main-branch before proceeding.
+### Create Nexct.JS project
+
+We need something to deploy so create an empty Next.JS app using `npx create-next-app@latest` and push to the main-branch.
 
 ### Setup Github workflow
 
 This is where the magic happens. Github allows us to define build pipelines using Yaml files very similar to how pipelines work in Azure DevOps (for those who work with Azure DevOps at work).
 
-Check out your repository locally and create the file `.github/workflows/gh-pages.yml` inside your repository.
+Checkout your repository locally and create the file `.github/workflows/gh-pages.yml` inside your repository.
 
 My gh-pages workflow looks as following:
 
@@ -61,6 +63,7 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
+
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
@@ -84,11 +87,12 @@ jobs:
 
 First this pipeline defines a trigger. The trigger will execute the build-pipeline everytime new changes are pushed to the main-branch.
 
-Under jobs we can define multiple jobs. Right now there is only a build step that executes 4 steps.
+Under jobs we can define our build steps. The pipeline performs the following steps:
 
-1. Install node
-2. Run yarn install
-3. Compile and export Next.JS website
-4. Deploy output to the branch `gh-pages`. (this should be the same branch you configured in the previous step).
+1. Clone repository
+2. Install node
+3. Run yarn install
+4. Compile and export Next.JS website
+5. Deploy output to the branch `gh-pages`. (this should be the same branch you configured in the previous step).
 
-Push this file to your main branch and you are done. It will now compile and build a Next.JS app (given that there is a Next.JS app in your main-branch)
+Push this file to your main branch and you are done. It will now compile and deploy a Next.JS app to the gh-pages-branch.
