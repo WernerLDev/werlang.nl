@@ -39,8 +39,8 @@ const Home: NextPage<HomeProps> = ({ posts }: HomeProps) => {
           software developer. My currently prefered tech-stack is
           React/TypeScript for frontend and C#/.NET for backend.
         </p>
-        <Link href="/about-me">
-          <a className="btn btn-primary">Read more &#10139;</a>
+        <Link className="btn btn-primary" href="/about-me">
+          Read more &#10139;
         </Link>
       </Textblock>
 

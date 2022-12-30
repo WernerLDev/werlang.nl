@@ -8,8 +8,8 @@ export const NavbarLink = (props: { label: string; path: string }) => {
 
   return (
     <li className={`nav-item px-4 py-2 ${isActive && "bgcolor-black"}`}>
-      <Link className={`nav-link ${isActive && "active"}`} href={props.path}>
-        <a className={`nav-link`}>{props.label}</a>
+      <Link className={`nav-link`} href={props.path}>
+        {props.label}
       </Link>
     </li>
   );

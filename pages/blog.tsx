@@ -42,9 +42,7 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                       >
                         {FormatDate(dateObj)}
                       </time>
-                      <Link href={`posts/${post.slug}`}>
-                        <a>{post.title}</a>
-                      </Link>
+                      <Link href={`posts/${post.slug}`}>{post.title}</Link>
                     </li>
                   );
                 })}

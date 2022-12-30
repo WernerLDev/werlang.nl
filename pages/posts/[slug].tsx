@@ -41,9 +41,7 @@ export const Post = ({ post }: PostProps) => {
                 __html: post.content,
               }}
             ></div>
-            <Link href={`/blog`}>
-              <a>Back to overview</a>
-            </Link>
+            <Link href={`/blog`}>Back to overview</Link>
           </div>
           <div className="d-none d-lg-block col-lg-1"></div>
         </div>

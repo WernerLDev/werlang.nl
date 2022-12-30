@@ -18,22 +18,21 @@ export const LatestPosts = ({ posts }: LatestPostProps) => (
             key={`post${index}`}
             className="col-12 col-lg-4 pb-3 d-flex align-items-start flex-column"
           >
-            <Link href={`posts/${post.slug}`}>
-              <a className="fgcolor-orange text-decoration-none">
-                <h5 className="d-block">{post.title}</h5>
-              </a>
+            <Link
+              className="fgcolor-orange text-decoration-none"
+              href={`posts/${post.slug}`}
+            >
+              <h5 className="d-block">{post.title}</h5>
             </Link>
             <p>{post.metaDesc}</p>
             <p className="d-block mt-auto">
-              <Link href={`posts/${post.slug}`}>
-                <a>Continue reading &#10139;</a>
-              </Link>
+              <Link href={`posts/${post.slug}`}>Continue reading &#10139;</Link>
             </p>
           </div>
         ))}
       </div>
-      <Link href="/blog">
-        <a className="btn btn-primary">View more posts &#10139;</a>
+      <Link className="btn btn-primary" href="/blog">
+        View more posts &#10139;
       </Link>
     </div>
   </div>
