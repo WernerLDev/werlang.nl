@@ -1,12 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { BasePage } from "../components/base-page/base-page";
-import { Footer } from "../components/footer/footer";
-import { Header } from "../components/header/header";
 import { LatestPosts } from "../components/latest-posts/latest-posts";
-import { TextblockWithImage } from "../components/textblock-with-image/textblock-with-image";
 import { Textblock } from "../components/textblock/textblock";
 import { BlogPostMetaData, FetchPostsMetaData } from "../lib/posts-api";
 

@@ -1,11 +1,7 @@
 import fs from "fs";
 import { useMemo } from "react";
-import { Footer } from "../../components/footer/footer";
-import { Header } from "../../components/header/header";
 import { FormatDate } from "../../lib/format-date";
 import { BlogPost, FetchSinglePost } from "../../lib/posts-api";
-import { Breadcrumb } from "../../components/breadcrumb/breadcrumb";
-import Head from "next/head";
 import { BasePage } from "../../components/base-page/base-page";
 import Link from "next/link";
 

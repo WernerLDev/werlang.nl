@@ -4,7 +4,7 @@ import styles from "./footer.module.scss";
 
 export const Footer = () => (
   <footer className={styles.footer}>
-    <div className="container p-5">
+    <div className="container p-4 p-md-5">
       <div className="row">
         <div className="col-12 col-md-9">
           <p>

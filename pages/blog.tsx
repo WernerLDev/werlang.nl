@@ -23,16 +23,14 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
     return acc;
   }, {});
 
-  console.log(posts, postsGrouped);
-
   return (
     <BasePage title="Blog" header={<h1 className="mt-5">Blog posts</h1>}>
-      <div className="container p-5">
+      <div className="container p-4 p-md-5">
         {Object.entries(postsGrouped)
           .reverse()
-          .map(([group, posts]) => (
-            <>
-              <h2 className="">{group}</h2>
+          .map(([group, posts], index) => (
+            <div key={`group${index}`}>
+              <h2>{group}</h2>
               <ul className="list-unstyled mb-5 blogoverview">
                 {posts.map((post) => {
                   const dateObj = new Date(post.date);
@@ -51,7 +49,7 @@ const BlogPage: NextPage<BlogProps> = ({ posts }: BlogProps) => {
                   );
                 })}
               </ul>
-            </>
+            </div>
           ))}
       </div>
     </BasePage>

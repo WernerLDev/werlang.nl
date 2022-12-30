@@ -32,7 +32,7 @@ export const BasePage = ({
       <div className="page-wrapper">
         <Header>
           {header && (
-            <div className={`container p-5`}>
+            <div className={`container p-2 p-md-5`}>
               {breadCrumb && (
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb">
