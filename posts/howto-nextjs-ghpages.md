@@ -48,7 +48,7 @@ Checkout your repository locally and create the file `.github/workflows/gh-pages
 
 My gh-pages workflow looks as following:
 
-```
+```yaml
 name: GitHub Pages deploy
 
 on:
