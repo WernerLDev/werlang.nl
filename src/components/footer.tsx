@@ -1,3 +1,4 @@
+import { CONSTANTS } from "@/constants";
 import { format } from "date-fns";
 
 export const Footer = () => {
@@ -18,10 +19,10 @@ export const Footer = () => {
           </span>
         </small>
         <div className="fs-5">
-          <a href="#">
+          <a href={CONSTANTS.GithubUrl}>
             <i className="bi bi-github"></i>
           </a>{" "}
-          <a href="#">
+          <a href={CONSTANTS.LinkedinUrl}>
             <i className="bi bi-linkedin"></i>
           </a>
         </div>

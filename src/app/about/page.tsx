@@ -1,3 +1,4 @@
+import { CONSTANTS } from "@/constants";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,8 +56,8 @@ export default function About() {
           <h3 className="mt-4">Get in touch</h3>
           <p>
             Want to work with me? You can reach me through{" "}
-            <Link href="#">Linkedin</Link> or by{" "}
-            <Link href="#">sending me an email</Link>.
+            <Link href={CONSTANTS.LinkedinUrl}>Linkedin</Link> or by{" "}
+            <Link href={CONSTANTS.EmailAddress}>sending me an email</Link>.
           </p>
         </div>
         <div className="col-1 col-lg-2"></div>
