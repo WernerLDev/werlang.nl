@@ -1,0 +1,46 @@
+// Bootstrap variable overrides
+$enable-shadows: true;
+$prefix: "mo-";
+$font-size-base: 1.1rem;
+$footer-height: 60px;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+@import "../../node_modules/highlight.js/scss/atom-one-dark-reasonable.scss";
+
+body, .navbar {
+  background: $cyan-100;
+}
+
+.footer {
+  height: $footer-height;
+  line-height: $footer-height;
+}
+
+.home-header {
+  height: calc(100vh - 58px - $footer-height);
+}
+
+.page-wrapper {
+  min-height: calc(100vh - $footer-height);
+}
+
+.navbar-nav .nav-link.active, .btn-blue, .btn-blue:hover {
+  background: $cyan-200;
+  padding-left: 10px;
+}
+
+code.hljs {
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+@include color-mode(dark) {
+  .navbar-nav .nav-link.active, .btn-blue {
+    background: $cyan-700;
+  }
+
+  body, .navbar {
+    background: $cyan-800;
+  }
+}
