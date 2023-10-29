@@ -57,7 +57,10 @@ export default function About() {
           <p>
             Want to work with me? You can reach me through{" "}
             <Link href={CONSTANTS.LinkedinUrl}>Linkedin</Link> or by{" "}
-            <Link href={CONSTANTS.EmailAddress}>sending me an email</Link>.
+            <Link href={`mailto:${CONSTANTS.EmailAddress}`}>
+              sending me an email
+            </Link>
+            .
           </p>
         </div>
         <div className="col-1 col-lg-2"></div>
