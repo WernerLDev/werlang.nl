@@ -19,10 +19,10 @@ export const Footer = () => {
           </span>
         </small>
         <div className="fs-5">
-          <a href={CONSTANTS.GithubUrl}>
+          <a rel="author" href={CONSTANTS.GithubUrl}>
             <i className="bi bi-github"></i>
           </a>{" "}
-          <a href={CONSTANTS.LinkedinUrl}>
+          <a rel="author" href={CONSTANTS.LinkedinUrl}>
             <i className="bi bi-linkedin"></i>
           </a>
         </div>

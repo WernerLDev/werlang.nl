@@ -56,8 +56,11 @@ export default function About() {
           <h3 className="mt-4">Get in touch</h3>
           <p>
             Want to work with me? You can reach me through{" "}
-            <Link href={CONSTANTS.LinkedinUrl}>Linkedin</Link> or by{" "}
-            <Link href={`mailto:${CONSTANTS.EmailAddress}`}>
+            <Link rel="author" href={CONSTANTS.LinkedinUrl}>
+              Linkedin
+            </Link>{" "}
+            or by{" "}
+            <Link rel="author" href={`mailto:${CONSTANTS.EmailAddress}`}>
               sending me an email
             </Link>
             .
