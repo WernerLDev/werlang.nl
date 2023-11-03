@@ -1,4 +1,4 @@
-import { CONSTANTS } from "@/constants";
+import { PERSONAL_INFO } from "@/constants";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -12,8 +12,8 @@ export default function About() {
   return (
     <div className="container py-5 lh-lg">
       <div className="row">
-        <div className="col-1 col-lg-2"></div>
-        <div className="col-10 col-lg-8">
+        <div className="col-0 col-lg-2"></div>
+        <div className="col-12 col-lg-8 px-3">
           <h1 className="mb-4">About me</h1>
           <h3>My background</h3>
 
@@ -56,17 +56,17 @@ export default function About() {
           <h3 className="mt-4">Get in touch</h3>
           <p>
             Want to work with me? You can reach me through{" "}
-            <Link rel="author" href={CONSTANTS.LinkedinUrl}>
+            <Link rel="author" href={PERSONAL_INFO.LinkedinUrl}>
               Linkedin
             </Link>{" "}
             or by{" "}
-            <Link rel="author" href={`mailto:${CONSTANTS.EmailAddress}`}>
+            <Link rel="author" href={`mailto:${PERSONAL_INFO.EmailAddress}`}>
               sending me an email
             </Link>
             .
           </p>
         </div>
-        <div className="col-1 col-lg-2"></div>
+        <div className="col-0 col-lg-2"></div>
       </div>
     </div>
   );

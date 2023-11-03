@@ -8,8 +8,8 @@ export default function Blog() {
   return (
     <div className="container py-5 lh-lg">
       <div className="row">
-        <div className="col-1 col-lg-2"></div>
-        <div className="col-10 col-lg-8">
+        <div className="col-0 col-lg-2"></div>
+        <div className="col-12 col-lg-8 px-3">
           <h1 className="mb-4">Blog</h1>
           <ul className="list-unstyled mb-5 blogoverview">
             {posts.map((post) => {
@@ -29,6 +29,7 @@ export default function Blog() {
             })}
           </ul>
         </div>
+        <div className="col-0 col-lg-2"></div>
       </div>
     </div>
   );

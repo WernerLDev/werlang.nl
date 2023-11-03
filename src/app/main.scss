@@ -14,7 +14,12 @@ body, .navbar {
 
 .footer {
   height: $footer-height;
-  line-height: $footer-height;
+}
+
+@include media-breakpoint-up(lg) { 
+  .footer {
+    line-height: $footer-height;
+  }
 }
 
 .home-header {

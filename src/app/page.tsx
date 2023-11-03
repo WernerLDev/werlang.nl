@@ -15,8 +15,8 @@ export default function Home() {
       <div className="fluid-container home-header d-flex flex-column justify-content-center">
         <div className={`container pt-5 z-3`}>
           <div className="row">
-            <div className="col-1 col-lg-2"></div>
-            <div className="col-10 col-lg-8 d-flex flex-column flex-lg-row align-items-center">
+            <div className="col-0 col-lg-2"></div>
+            <div className="col-12 col-lg-8 px-3 d-flex flex-column flex-lg-row align-items-center">
               <Image
                 className="rounded-circle border border-5 border-white"
                 src={"/werner.jpg"}
@@ -40,7 +40,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="col-1 col-lg-2"></div>
+            <div className="col-0 col-lg-2"></div>
           </div>
         </div>
       </div>

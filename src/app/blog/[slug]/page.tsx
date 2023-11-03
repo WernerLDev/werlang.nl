@@ -16,8 +16,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
     <div className="container py-5 lh-lg">
       <div className="row">
-        <div className="col-1 col-lg-2"></div>
-        <div className="col-10 col-lg-8">
+        <div className="col-0 col-lg-2"></div>
+        <div className="col-12 col-lg-8 px-3">
           {post === null ? (
             <>
               <h1>Error: Post not found</h1>
@@ -41,7 +41,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
           <Link href="/blog">Back to overview</Link>
         </div>
-        <div className="col-1 col-lg-2"></div>
+        <div className="col-0 col-lg-2"></div>
       </div>
     </div>
   );
