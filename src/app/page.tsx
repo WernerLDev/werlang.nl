@@ -24,7 +24,7 @@ export default function Home() {
                 height={200}
                 alt="Black and white picture of me smiling at the camera"
               />
-              <div className="ms-0 ms-lg-5 mt-4 mt-lg-0">
+              <div className="ms-0 ms-lg-5 mt-4 mt-lg-0 text-center text-lg-start">
                 <h1 className="display-4">Hi, I&apos;m Werner,</h1>
                 <h3>Fullstack .NET developer</h3>
 
