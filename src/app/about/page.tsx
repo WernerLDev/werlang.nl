@@ -60,7 +60,10 @@ export default function About() {
               Linkedin
             </Link>{" "}
             or by{" "}
-            <Link rel="author" href={`mailto:${PERSONAL_INFO.EmailAddress}`}>
+            <Link
+              rel="author"
+              href={`mailto:${atob(PERSONAL_INFO.EmailAddress)}`}
+            >
               sending me an email
             </Link>
             .
