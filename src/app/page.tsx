@@ -22,7 +22,7 @@ export default function Home() {
                 src={"/werner.jpg"}
                 width={200}
                 height={200}
-                alt="Black and white picture of me smiling at the camera"
+                alt="Black and white portrait photo of me"
               />
               <div className="ms-0 ms-lg-5 mt-4 mt-lg-0 text-center text-lg-start">
                 <h1 className="display-4">Hi, I&apos;m Werner,</h1>

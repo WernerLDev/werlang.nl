@@ -16,18 +16,12 @@ body, .navbar {
   height: $footer-height;
 }
 
-@include media-breakpoint-up(lg) { 
-  .footer {
-    line-height: $footer-height;
-  }
-}
-
 .home-header {
   height: calc(100vh - 58px - $footer-height);
 }
 
 .page-wrapper {
-  min-height: calc(100vh - $footer-height);
+  min-height: calc(100vh);
 }
 
 .navbar-nav .nav-link.active, .btn-blue, .btn-blue:hover {
@@ -47,5 +41,16 @@ code.hljs {
 
   body, .navbar {
     background: $cyan-800;
+  }
+}
+
+
+@include media-breakpoint-up(lg) { 
+  .footer {
+    line-height: $footer-height;
+  }
+
+  .page-wrapper {
+    min-height: calc(100vh - $footer-height);
   }
 }
