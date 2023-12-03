@@ -10,6 +10,17 @@ export async function generateStaticParams() {
   });
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = FetchSinglePost(params.slug);
+  return {
+    title: `${post?.metaData.title} | werlang.nl`,
+  };
+}
+
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = FetchSinglePost(params.slug);
 

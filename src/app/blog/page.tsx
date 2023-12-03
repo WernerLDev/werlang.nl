@@ -1,6 +1,11 @@
 import { FormatDate } from "@/lib/format-date";
 import { FetchPostsMetaData } from "@/lib/posts-api";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Blogs | werlang.nl",
+};
 
 export default function Blog() {
   const posts = FetchPostsMetaData();
