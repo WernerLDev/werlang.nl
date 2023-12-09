@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { ThemeSwitcher } from "./theme-switcher";
@@ -19,7 +19,7 @@ export const Navigation = (props: NavigationProps) => {
 
   return (
     <Navbar sticky="top" expand="lg" collapseOnSelect>
-      <Container>
+      <Container fluid className="px-5">
         <Nav.Link
           as={Link}
           eventKey={0}

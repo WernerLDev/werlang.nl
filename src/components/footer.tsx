@@ -3,8 +3,8 @@ import { format } from "date-fns";
 
 export const Footer = () => {
   return (
-    <footer className="fluid-container footer z-3">
-      <div className="container d-lg-flex justify-content-between">
+    <footer className="container-fluid px-5 footer z-3">
+      <div className="d-lg-flex justify-content-between">
         <small>
           <span>
             Copyright &copy; {format(new Date(), "yyyy")} - Werner Langenhuisen
