@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { ThemeSwitcher } from "./theme-switcher";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SettingsMenu } from "./settings-menu";
 
 export type NavigationProps = {
   menuItems: {
@@ -19,7 +20,7 @@ export const Navigation = (props: NavigationProps) => {
 
   return (
     <Navbar sticky="top" expand="lg" collapseOnSelect>
-      <Container fluid className="px-5">
+      <Container fluid className="px-3 px-lg-5">
         <Nav.Link
           as={Link}
           eventKey={0}
