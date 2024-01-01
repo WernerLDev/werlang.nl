@@ -4,26 +4,29 @@ The website is hosted on github-pages and deployed using github actions.
 
 ## Getting Started
 
-First, run the development server:
+### Run locally
+
+To run this website locally, checkout code and run the development server:
 
 ```bash
-npm run dev
-# or
+# Install frontend dependencies
+yarn
+
+# Run dev server
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+### Make production build
 
-To learn more about Next.js, take a look at the following resources:
+A production build can be made with the following command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The output can be found in the `out` folder.
 
 ## License
 
