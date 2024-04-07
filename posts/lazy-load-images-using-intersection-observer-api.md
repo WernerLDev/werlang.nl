@@ -1,8 +1,7 @@
 ---
 title: "Lazy load images using IntersactionObserver API"
 metaDesc: "Javascript offers an API that can be used to detect if an element is scrolled into view or not. We can use this API to postpone loading images until user scrolls down"
-date: "2023-12-31"
-draft: false
+date: "2024-04-07"
 ---
 
 If you want to lazy load an image or have a fade-in animation when things are scrolled into view you could listen to the scroll-event and do all the calculations yourself. But this is a huge pain in the ass. Since 2018 we can use the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) which makes this much easier.
