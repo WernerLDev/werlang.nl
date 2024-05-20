@@ -19,7 +19,7 @@ export const Navigation = (props: NavigationProps) => {
 
   return (
     <Navbar sticky="top" expand="lg" collapseOnSelect>
-      <Container fluid className="px-3 px-lg-5">
+      <Container className="px-3 px-lg-5">
         <Nav.Link
           as={Link}
           eventKey={0}

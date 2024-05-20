@@ -3,7 +3,7 @@ import { format } from "date-fns";
 
 export const Footer = () => {
   return (
-    <footer className="container-fluid px-3 px-lg-5 footer z-3">
+    <footer className="container px-3 px-lg-5 footer z-3">
       <div className="d-lg-flex justify-content-between">
         <small>
           <span>

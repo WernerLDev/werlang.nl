@@ -17,13 +17,6 @@ export default function Home() {
           <div className="row">
             <div className="col-0 col-lg-2"></div>
             <div className="col-12 col-lg-8 px-3 d-flex flex-column flex-lg-row align-items-center">
-              <Image
-                className="rounded-circle border border-5 border-white"
-                src={"/werner.jpg"}
-                width={200}
-                height={200}
-                alt="Black and white portrait photo of me"
-              />
               <div className="ms-0 ms-lg-5 mt-4 mt-lg-0 text-center text-lg-start">
                 <h1 className="display-4">Hi, I&apos;m Werner,</h1>
                 <h3>Fullstack .NET developer</h3>

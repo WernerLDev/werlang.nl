@@ -16,23 +16,35 @@ export default function Blog() {
         <div className="col-0 col-lg-2"></div>
         <div className="col-12 col-lg-8 px-3">
           <h1 className="mb-4">Blog</h1>
-          <ul className="list-unstyled mb-5 blogoverview">
-            {posts.map((post) => {
-              const dateObj = new Date(post.date);
-              return (
-                <li className="d-lg-flex py-1" key={post.slug}>
-                  <time
-                    className="d-block me-3 d-lg-inline-block"
-                    dateTime={dateObj.toISOString()}
-                  >
-                    <small>{FormatDate(dateObj)}</small>
-                  </time>
 
-                  <Link href={`blog/${post.slug}`}>{post.title}</Link>
-                </li>
-              );
-            })}
-          </ul>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Publish date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {posts.map((post) => {
+                const dateObj = new Date(post.date);
+                return (
+                  <tr key={`post${post.slug}`}>
+                    <td>
+                      <Link href={`blog/${post.slug}`}>{post.title}</Link>
+                    </td>
+                    <td>
+                      <time
+                        className="d-block me-3 d-lg-inline-block"
+                        dateTime={dateObj.toISOString()}
+                      >
+                        <small>{FormatDate(dateObj)}</small>
+                      </time>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
         <div className="col-0 col-lg-2"></div>
       </div>
