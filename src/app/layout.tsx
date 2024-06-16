@@ -1,12 +1,13 @@
 import "./main.scss";
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Martel_Sans, Mate, Noto_Sans } from "next/font/google";
 import { Providers } from "../providers";
 import { HtmlWithTheme } from "../components/HtmlWithTheme";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
-const mate = Noto_Sans({ subsets: ["latin"], weight: ["300", "400"] });
+const noto = Noto_Sans({ subsets: ["latin"], weight: ["300", "400"] });
+const mate = Mate({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "werlang.nl",

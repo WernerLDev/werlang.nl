@@ -1,31 +1,41 @@
 // Bootstrap variable overrides
 $enable-shadows: true;
 $prefix: "mo-";
-$font-size-base: 1.1rem;
+$font-size-base: 1.2rem;
 $footer-height: 60px;
+$body-bg: #f8f9fa;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 @import "../../node_modules/highlight.js/scss/atom-one-dark-reasonable.scss";
 
-body, .navbar {
-  background: $cyan-100;
+$table-bg: $gray-100;
+
+body {  
+  .navbar {
+    background: $body-bg;
+  }
 }
+
 
 .footer {
   height: $footer-height;
+
+  .container {
+    max-height: $footer-height;
+  }
 }
 
-.home-header {
-  height: calc(100vh - 58px - $footer-height);
-}
+// .home-header {
+//   height: calc(100vh - 58px - ($footer-height + 2px));
+// }
 
 .page-wrapper {
   min-height: calc(100vh);
 }
 
 .navbar-nav .nav-link.active, .btn-blue, .btn-blue:hover {
-  background: $cyan-200;
+  background: $orange-300;
   padding-left: 10px;
 }
 
@@ -36,11 +46,14 @@ code.hljs {
 
 @include color-mode(dark) {
   .navbar-nav .nav-link.active, .btn-blue {
-    background: $cyan-700;
+    background: $orange-600;
   }
 
-  body, .navbar {
-    background: $cyan-800;
+  $table-bg: $gray-900;
+  $body-bg: $gray-900;
+
+  .navbar {
+    background: $body-bg;
   }
 }
 
@@ -51,6 +64,6 @@ code.hljs {
   }
 
   .page-wrapper {
-    min-height: calc(100vh - $footer-height);
+    min-height: calc(100vh - ($footer-height + 2px));
   }
 }

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div className="fluid-container home-header d-flex flex-column justify-content-center">
-        <div className={`container pt-5 z-3`}>
+        <div className={`container pt-5 mt-5 z-3`}>
           <div className="row">
             <div className="col-0 col-lg-2"></div>
             <div className="col-12 col-lg-8 px-3 d-flex flex-column flex-lg-row align-items-center">
