@@ -26,16 +26,13 @@ body {
   }
 }
 
-// .home-header {
-//   height: calc(100vh - 58px - ($footer-height + 2px));
-// }
-
 .page-wrapper {
   min-height: calc(100vh);
 }
 
 .navbar-nav .nav-link.active, .btn-blue, .btn-blue:hover {
-  background: $orange-300;
+  background: $orange-600;
+  color: #fff;
   padding-left: 10px;
 }
 
@@ -45,10 +42,6 @@ code.hljs {
 }
 
 @include color-mode(dark) {
-  .navbar-nav .nav-link.active, .btn-blue {
-    background: $orange-600;
-  }
-
   $table-bg: $gray-900;
   $body-bg: $gray-900;
 

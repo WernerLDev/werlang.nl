@@ -1,13 +1,12 @@
 import "./main.scss";
 import type { Metadata } from "next";
-import { Martel_Sans, Mate, Noto_Sans } from "next/font/google";
+import { Lora } from "next/font/google";
 import { Providers } from "../providers";
 import { HtmlWithTheme } from "../components/HtmlWithTheme";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
-const noto = Noto_Sans({ subsets: ["latin"], weight: ["300", "400"] });
-const mate = Mate({ subsets: ["latin"], weight: "400" });
+const lora = Lora({ subsets: ["latin"], weight: ["400", "500"] });
 
 export const metadata: Metadata = {
   title: "werlang.nl",
@@ -22,7 +21,7 @@ export default function RootLayout({
   return (
     <Providers>
       <HtmlWithTheme>
-        <body className={mate.className}>
+        <body className={lora.className}>
           <div className="fluid-container page-wrapper">
             <Navigation
               menuItems={[
