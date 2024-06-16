@@ -1,13 +1,13 @@
 1:HL["/_next/static/media/0e790e04fd40ad16-s.p.woff2",{"as":"font","type":"font/woff2"}]
 2:HL["/_next/static/media/75c438ab8bda273d-s.p.woff2",{"as":"font","type":"font/woff2"}]
 3:HL["/_next/static/css/73f2f69e49a25305.css",{"as":"style"}]
-0:["6OrDlST2B50wnpZBEOxsV",[[["",{"children":["blog",{"children":[["slug","lazy-load-images-using-intersection-observer-api","d"],{"children":["__PAGE__?{\"slug\":\"lazy-load-images-using-intersection-observer-api\"}",{}]}]}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/73f2f69e49a25305.css","precedence":"next"}]],"$L5"]]]]
+0:["0PleMCMCTjdQ4BrkD5Rvj",[[["",{"children":["blog",{"children":[["slug","lazy-load-images-using-intersection-observer-api","d"],{"children":["__PAGE__?{\"slug\":\"lazy-load-images-using-intersection-observer-api\"}",{}]}]}]},"$undefined","$undefined",true],"$L4",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/73f2f69e49a25305.css","precedence":"next"}]],"$L5"]]]]
 6:I{"id":610,"chunks":["685:static/chunks/685-37ac10ae36ac1df4.js","138:static/chunks/138-fad7c23604f380e9.js","185:static/chunks/app/layout-488ffdf3a66b594a.js"],"name":"Providers","async":false}
 7:I{"id":9037,"chunks":["685:static/chunks/685-37ac10ae36ac1df4.js","138:static/chunks/138-fad7c23604f380e9.js","185:static/chunks/app/layout-488ffdf3a66b594a.js"],"name":"HtmlWithTheme","async":false}
 8:I{"id":2243,"chunks":["685:static/chunks/685-37ac10ae36ac1df4.js","138:static/chunks/138-fad7c23604f380e9.js","185:static/chunks/app/layout-488ffdf3a66b594a.js"],"name":"Navigation","async":false}
 9:I{"id":7767,"chunks":["272:static/chunks/webpack-6d405da937c55efa.js","971:static/chunks/fd9d1056-d14c2ed43eb473b3.js","596:static/chunks/596-7a79afd8655e8bf5.js"],"name":"default","async":false}
 a:I{"id":7920,"chunks":["272:static/chunks/webpack-6d405da937c55efa.js","971:static/chunks/fd9d1056-d14c2ed43eb473b3.js","596:static/chunks/596-7a79afd8655e8bf5.js"],"name":"default","async":false}
-d:I{"id":6685,"chunks":["685:static/chunks/685-37ac10ae36ac1df4.js","308:static/chunks/app/blog/[slug]/page-495e04ca657cb100.js"],"name":"","async":false}
+d:I{"id":6685,"chunks":["685:static/chunks/685-37ac10ae36ac1df4.js","308:static/chunks/app/blog/[slug]/page-272983a6fad259b4.js"],"name":"","async":false}
 c:T116f,<p>If you want to lazy load an image or have a fade-in animation when things are scrolled into view you could listen to the scroll-event and do all the calculations yourself. But this is a huge pain in the ass. Since 2018 we can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">Intersection Observer API</a> which makes this much easier.</p>
 <p>Here is a simple example with React and TypeScript:</p>
 <pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> { useEffect, useRef, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
