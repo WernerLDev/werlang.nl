@@ -1,10 +1,6 @@
-import { LazyImage } from "@/components/LazyImage";
-import { TimeInput } from "@/components/forms/TimeInput";
 import { PERSONAL_INFO } from "@/constants";
 import { Metadata } from "next";
 import Link from "next/link";
-import { useState } from "react";
-import { TestTime } from "./testTime";
 
 export const metadata: Metadata = {
   title: "About me | werlang.nl",
@@ -57,8 +53,6 @@ export default function About() {
             applications.
           </p>
 
-          {/* <TestTime /> */}
-
           <h3 className="mt-4">Get in touch</h3>
           <p>
             Want to work with me? You can reach me through{" "}
@@ -74,7 +68,6 @@ export default function About() {
             </Link>
             .
           </p>
-          {/* <LazyImage src="/werner.jpg" alt="" /> */}
         </div>
         <div className="col-0 col-lg-2"></div>
       </div>

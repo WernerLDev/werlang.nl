@@ -19,7 +19,7 @@ export const Navigation = (props: NavigationProps) => {
 
   return (
     <Navbar sticky="top" expand="lg" collapseOnSelect>
-      <Container className="px-3 px-lg-5">
+      <Container fluid className="px-3 px-lg-5">
         <Nav.Link
           as={Link}
           eventKey={0}
@@ -27,7 +27,7 @@ export const Navigation = (props: NavigationProps) => {
           className="text-decoration-none"
         >
           <Navbar.Brand>
-            <i className="bi bi-person-bounding-box"></i> werlang.nl
+            <i className="bi bi-person-bounding-box"></i> Werner
           </Navbar.Brand>
         </Nav.Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
