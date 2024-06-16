@@ -69,10 +69,10 @@ export const ParticleBg = () => {
 
       particles: {
         color: {
-          value: theme == "dark" ? "#087990" : "#9eeaf9", //6edff6
+          value: theme == "dark" ? "#343a40" : "#dee2e6", //6edff6
         },
         links: {
-          color: theme == "dark" ? "#087990" : "#9eeaf9",
+          color: theme == "dark" ? "#343a40" : "#dee2e6",
           distance: 150,
           enable: true,
           opacity: 0.5,
