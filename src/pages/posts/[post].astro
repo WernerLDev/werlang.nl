@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import { format } from "date-fns";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const allBlogPosts = await getCollection("blog");
+  return allBlogPosts.map((entry) => {
+    return {
+      params: { post: entry.slug },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <a href="/">&larr; Back to overview</a>
+  <h1 class="mt-4">{entry.data.title}</h1>
+  <p class="mb-4">
+    Publish date: {format(entry.data.publishDate, "dd MMMM yyyy")}
+  </p>
+
+  <Content />
+</Layout>
