@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import "@fontsource-variable/sora";
+import "../styles/main.scss";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="container text-sm-center">
+        Copyright &copy; 2024 - Werner Langenhuisen<br />
+        Source code of this website is licenced under <a
+          href="https://www.gnu.org/licenses/agpl-3.0.html">GNU AGPLv3</a
+        >, All content is licenced under <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >CC BY-NC-SA 4.0</a
+        >
+        <br /><a href="#">View source</a>
+      </div>
+    </footer>
+  </body>
+</html>
