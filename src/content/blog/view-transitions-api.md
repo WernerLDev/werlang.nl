@@ -9,7 +9,9 @@ CSS has a new cool feature. It is called [view transitions](https://drafts.csswg
 
 Currently it is supported in all browsers except Firefox.
 
-The idea is really simple. You can trigger a view transition with JavaScript as following:
+When you want to make a transition between pages in an MPA you only need CSS, if you want to trigger view transitions in an SPA you need a tiny bit of Javascript.
+
+To trigger a view transition with Javascript you need the following peace of code:
 
 ```typescript
 document.startViewTransition(() => {
@@ -54,4 +56,4 @@ If you would want to create an animation when switching between dark and light m
 }
 ```
 
-Of course this is just a very basic example. And in the case you want to animate transitions between pages in a MPA you do not need any JavaScript. Just the CSS will be enough to animate the old and new page in/out of the screen.
+Of course this is just a very basic example. There are many more things you can do with view transitions. For some cool examples you can check the [Chrome for developers](https://developer.chrome.com/docs/web-platform/view-transitions/) website.
