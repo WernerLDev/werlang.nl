@@ -1,20 +1,16 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../../node_modules/bootstrap/scss/functions";
 
-$blue: #257180;
-
+// 2. Include any default variable overrides here
 $body-bg: #E7E6E1;
 $body-color: #454545;
 $link-color: #314E52;
 $primary: $link-color;
 
-
 $list-group-border-color: rgba(#F2A154, .40);
-
 
 $font-size-base: 1.1rem;
 
-// 2. Include any default variable overrides here
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -25,9 +21,10 @@ $container-max-widths: (
 
 $font-family-base: 'Sora Variable', serif;
 
+
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../../node_modules/bootstrap/scss/variables";
-//@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/variables-dark";
 
 // 4. Include any default map overrides here
 
@@ -53,6 +50,16 @@ $font-family-base: 'Sora Variable', serif;
 
 // 8. Add additional custom code here
 
+$color-mode-type: data;
+
+@include color-mode(dark) {
+  $body-bg: #314E52;
+  $body-color: #fff;
+  $link-color: #E7E6E1;
+  $primary: $link-color;
+  
+  $list-group-border-color: rgba(#F2A154, .40);
+}
 
 main {
   min-height: calc(100vh - 100px);
@@ -71,8 +78,4 @@ time.post-date {
 .astro-code {
   padding: 1em;
   border-radius: 5px;
-}
-
-.header {
-  background: $blue;
 }

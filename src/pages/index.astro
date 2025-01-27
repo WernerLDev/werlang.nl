@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import { format } from "date-fns";
 
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 
 const allBlogPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
@@ -13,12 +12,6 @@ let currentYear = 0;
 ---
 
 <Layout title="Werner Langenhuisen">
-  <img
-    class="mx-auto mb-4 d-block"
-    src="/welcome.svg"
-    height="228"
-    alt="Vector image of a guy waving"
-  />
   <h1 class="">Hi, I'm Werner</h1>
   <h4>Fullstack .NET Developer</h4>
   <p>
@@ -43,15 +36,13 @@ let currentYear = 0;
               </li>
             )}
             <li class="list-group-item ps-0">
-              <>
-                <time
-                  class="me-3 text-muted post-date d-none d-md-inline-block"
-                  datetime={entry.data.publishDate.toISOString()}
-                >
-                  {format(entry.data.publishDate, "dd LLLL")}
-                </time>
-                <a href={`/posts/${entry.slug}`}>{entry.data.title}</a>
-              </>
+              <time
+                class="me-3 text-muted post-date d-none d-md-inline-block"
+                datetime={entry.data.publishDate.toISOString()}
+              >
+                {format(entry.data.publishDate, "dd LLLL")}
+              </time>
+              <a href={`/posts/${entry.slug}`}>{entry.data.title}</a>
             </li>
           </>
         );
