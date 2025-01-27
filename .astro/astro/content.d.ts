@@ -141,6 +141,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"create-odata-endpoints-using-csharp.md": {
+	id: "create-odata-endpoints-using-csharp.md";
+  slug: "create-odata-endpoints-using-csharp";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "deploy-nextjs-to-ghpages.md": {
 	id: "deploy-nextjs-to-ghpages.md";
   slug: "deploy-nextjs-to-ghpages";
